@@ -22,6 +22,8 @@ services:
     environment:
       - MONGO_SERVER=user-db
       - MONGO_INITDB_DATABASE=users
+      - DB_URL=mongodb://user-db:27017/users?retryWrites=true
+      - PORT=3000
     networks:
       - mongo_net
     depends_on:
